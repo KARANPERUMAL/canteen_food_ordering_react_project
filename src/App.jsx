@@ -4,6 +4,9 @@ import { AppProvider } from "./components/AppContext"; // ✔️ Ensure correct 
 import LoginPage from "./components/LoginPage";
 import Home from "./components/Home";
 import CreateAccount from "./components/CreateAccount";
+import FastFoodPage from "./components/FastFood";
+
+
 
 const App = () => {
   return (
@@ -14,6 +17,7 @@ const App = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/create" element={<CreateAccount />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/FastFoods" element={<FastFoodPage/>}/>
         </Routes>
       </Router>
     </AppProvider>

@@ -11,7 +11,7 @@ export const AppProvider = ({ children }) => {
     if (storedUsers) {
       setUsers(JSON.parse(storedUsers));
     } else {
-      setUsers(usersData);
+      setUsers([]);
     }
   }, []);
 

@@ -2,8 +2,50 @@
   "user": [
     {
       "id": "8258",
-      "username": "kishore13",
+      "username": "kishore1",
       "password": "kishore1234"
+    },
+    {
+      "id": "2488",
+      "username": "kishore13zxccs",
+      "password": "kishore1234asdasd"
+    }
+  ],
+  "foods": [
+    {
+      "id": 1,
+      "name": "Burger",
+      "category": "Fast Foods",
+      "price": 50,
+      "image": "https://example.com/burger.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Veg Meal",
+      "category": "Meals",
+      "price": 70,
+      "image": "https://example.com/vegmeal.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Coke",
+      "category": "Drinks",
+      "price": 20,
+      "image": "https://example.com/coke.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ice Cream",
+      "category": "Desserts",
+      "price": 30,
+      "image": "https://example.com/icecream.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Chips",
+      "category": "Snacks",
+      "price": 15,
+      "image": "https://example.com/chips.jpg"
     }
   ]
 }
