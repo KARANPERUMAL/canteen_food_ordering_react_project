@@ -1,0 +1,134 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Login Page */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #3498db, #2ecc71);
+  color: white;
+}
+
+.login-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-page input {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  width: 260px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-page button {
+  padding: 0.8rem 2rem;
+  margin-top: 1rem;
+  background-color: white;
+  color: #3498db;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-page button:hover {
+  background-color: #ecf0f1;
+}
+
+/* Home Page */
+.home {
+  padding: 2rem;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.category-btn {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: white;
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+/* Category Page */
+.category-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.category-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.item-card {
+  width: 220px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.item-card:hover {
+  transform: scale(1.03);
+}
+
+.item-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item-card h3 {
+  margin: 0.5rem 0;
+  color: #34495e;
+}
+
+.item-card p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
