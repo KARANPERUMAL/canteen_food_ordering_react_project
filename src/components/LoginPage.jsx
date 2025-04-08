@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAppContext } from './AppContext'; // ⬅️ Make sure path is correct
 import '../components/styles/LoginPage.css';
 
-const LoginPage = ({ setIsAuthenticated }) => {
+const LoginPage = () => {
   const navigate = useNavigate();
+  const { setIsAuthenticated } = useAppContext(); // ⬅️ using context
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [users, setUsers] = useState([]);
@@ -24,8 +26,8 @@ const LoginPage = ({ setIsAuthenticated }) => {
 
     if (user) {
       alert('Login successful');
-      setIsAuthenticated(true);
-      navigate('/home');
+      setIsAuthenticated(true); // ⬅️ use context setter
+      navigate('/home');        // ⬅️ navigate after setting auth
     } else {
       alert('Invalid credentials');
     }
