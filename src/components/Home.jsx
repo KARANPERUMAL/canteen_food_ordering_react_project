@@ -1,16 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../components/styles/HomePage.css"; // Add new CSS
 
-const categories = ['Fast Foods', 'Meals', 'Drinks', 'Deserts', 'Snacks'];
+const HomePage = () => {
+  const categories = ["Fast Foods", "Meals", "Drinks", "Deserts", "Snacks"];
 
-const Home = () => {
   return (
-    <div className="home">
-      <h1>Welcome to CampusEats</h1>
-      <div className="category-buttons">
-        {categories.map((cat, index) => (
-          <Link key={index} to={`/${cat.replace(/\s+/g, '')}`} className="category-btn">
-            {cat}
+    <div className="homepage">
+      <h1 className="homepage-title">Welcome to CampusEats</h1>
+      <div className="category-links">
+        {categories.map((category) => (
+          <Link
+            key={category}
+            to={`/category/${category.toLowerCase().replace(" ", "")}`}
+            className="category-link"
+          >
+            {category}
           </Link>
         ))}
       </div>
@@ -18,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

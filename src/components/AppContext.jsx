@@ -1,28 +1,20 @@
+// AppContext.jsx
 import React, { createContext, useContext, useEffect, useState } from "react";
-
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [users, setUsers] = useState([]);
+  const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    const storedUsers = localStorage.getItem("users");
-    if (storedUsers) {
-      setUsers(JSON.parse(storedUsers));
-    } else {
-      setUsers([]);
-    }
+    fetch("http://localhost:5000/foods")
+      .then(res => res.json())
+      .then(data => setFoods(data))
+      .catch(err => console.error("Failed to fetch foods:", err));
   }, []);
 
-  const addUser = (newUser) => {
-    const updatedUsers = [...users, newUser];
-    setUsers(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-  };
-
   return (
-    <AppContext.Provider value={{ users, addUser }}>
+    <AppContext.Provider value={{ foods }}>
       {children}
     </AppContext.Provider>
   );
