@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../components/styles/LoginPage.css';
 
-const LoginPage = () => {
+const LoginPage = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -24,6 +24,7 @@ const LoginPage = () => {
 
     if (user) {
       alert('Login successful');
+      setIsAuthenticated(true);
       navigate('/home');
     } else {
       alert('Invalid credentials');
@@ -32,20 +33,16 @@ const LoginPage = () => {
 
   return (
     <div className="login-container">
-      {/* Left panel */}
       <div className="login-left">
         <h2>ONLINE FOOD DELIVERY SERVICE</h2>
         <h1>POWERED BY NPR GROUP OF INSTITUTIONS</h1>
         <p>Don’t have account? <a href="/create">Create account →</a></p>
         <img className="institution-image" src="../src/assets/Images/LoginPageBG2.jpg" alt="Institute" />
       </div>
-
-      {/* Right panel */}
       <div className="login-right">
         <div className="login-logo">CampusEats</div>
         <div className="login-box">
           <h2>Login to your account</h2>
-          
           <form onSubmit={handleLogin}>
             <input
               type="text"
