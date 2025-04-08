@@ -13,7 +13,7 @@ const HomePage = () => {
           <Link
             key={category}
             to={`/category/${category.toLowerCase().replace(" ", "")}`}
-            className="category-link"
+            className="category-btn"
           >
             {category}
           </Link>
