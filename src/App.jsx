@@ -5,6 +5,7 @@ import { AppProvider, useAppContext } from './components/AppContext';
 import LoginPage from './components/LoginPage';
 import CreateAccount from './components/CreateAccount';
 import HomePage from './components/Home';
+import CategoryPage from './components/CategoryPage'; // ✅ Add this import
 
 // Wrapper to use context inside Routes
 const AppRoutes = () => {
@@ -27,6 +28,12 @@ const AppRoutes = () => {
       <Route
         path="/home"
         element={isAuthenticated ? <HomePage /> : <Navigate to="/login" />}
+      />
+
+      {/* ✅ Add this route to handle /category/:categoryName */}
+      <Route
+        path="/category/:categoryName"
+        element={isAuthenticated ? <CategoryPage /> : <Navigate to="/login" />}
       />
     </Routes>
   );
