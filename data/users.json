@@ -22,35 +22,35 @@
       "name": "Burger",
       "category": "FastFoods",
       "price": 50,
-      "image": "https://example.com/burger.jpg"
+      "image": "../src/assets/Images/burger.jpeg"
     },
     {
       "id": "2",
       "name": "Veg Meal",
       "category": "Meals",
       "price": 70,
-      "image": "https://example.com/vegmeal.jpg"
+      "image": "../src/assets/Images/vegmeals.jpeg"
     },
     {
       "id": "3",
       "name": "Coke",
       "category": "Drinks",
       "price": 20,
-      "image": "https://example.com/coke.jpg"
+      "image": "../src/assets/Images/coke.jpeg"
     },
     {
       "id": "4",
-      "name": "Ice Cream",
+      "name": "Vennila Ice Cream",
       "category": "Desserts",
       "price": 30,
-      "image": "https://example.com/icecream.jpg"
+      "image": "../src/assets/Images/vennila.jpeg"
     },
     {
       "id": "5",
-      "name": "Chips",
+      "name": "French Fries",
       "category": "Snacks",
       "price": 15,
-      "image": "https://example.com/chips.jpg"
+      "image": "../src/assets/Images/french fries.jpeg"
     }
   ]
 }

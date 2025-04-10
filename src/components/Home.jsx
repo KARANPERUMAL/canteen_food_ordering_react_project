@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../components/styles/HomePage.css"; // Add new CSS
 
 const HomePage = () => {
-  const categories = ["Fast Foods", "Meals", "Drinks", "Deserts", "Snacks"];
+  const categories = ["Fast Foods", "Meals", "Drinks", "Desserts", "Snacks"];
 
   return (
     <div className="homepage">

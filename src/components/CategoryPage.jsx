@@ -28,9 +28,17 @@ const CategoryPage = () => {
 
   return (
     <div className="min-h-screen py-10 px-4">
-      <h2 className="text-3xl font-bold text-center mb-8 capitalize">
-        {categoryName} Menu
-      </h2>
+     <h2 className="text-3xl font-bold text-center mb-8">
+  {categoryName
+    .replace(/([a-z])([A-Z])/g, '$1 $2') // add space in camelCase if needed
+    .split(/[\s_-]+/)                    // split by any space, underscore, or dash
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+  } Menu
+</h2>
+
+
+
 
       {loading ? (
         <p className="text-center text-lg">Loading...</p>
